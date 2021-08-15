@@ -1,42 +1,45 @@
 {
-  "name": "Gyztor/WordPress",
-  "type": "project",
-  "license": "MIT",
-  "description": "Wordpress",
-  "homepage": "https://havensedgemc.com",
-  "authors": [
-    {
-      "name": "Gyztor",
-      "email": "gyztor@havensedgemc.com",
-      "homepage": "https://github.com/Gyztor"
-    }
-  ],
-  "keywords": [
-    "composer", "wordpress", "wp", "wp-config"
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
-    }
-  ],
-  "require": {
-    "php": ">=7.1",
-    "composer/installers": "^2.0",
-    "vlucas/phpdotenv": "^5.3",
-    "oscarotero/env": "^2.1",
-    "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.5",
-    "ext-imagick": "*",
-    "ext-mbstring": "*",
-    "ext-exif": "*"
-  },
-  "extra": {
-    "installer-paths": {
-      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-      },
-    "wordpress-install-dir": "./"
-    }
+    "name": "gyztor/wordpress",
+    "type": "project",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "ext-imagick": "^3.4",
+        "ext-mbstring": "*",
+        "ext-exif": "*",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "php": ">=7.1",
+        "wpackagist-plugin/akismet": "dev-trunk",
+        "wpackagist-plugin/wordpress-seo": ">=7.0.2",
+        "wpackagist-theme/hueman": "*",
+        "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.5"
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [
+                "wpackagist-plugin/akismet"
+            ],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gyztor",
+            "email": "gyztor@havensedgemc.com"
+        }
+    ]
 }
