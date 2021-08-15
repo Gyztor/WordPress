@@ -37,6 +37,6 @@
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
       },
-    "wordpress-install-dir": "web/wp"
+    "wordpress-install-dir": "./"
     }
 }
