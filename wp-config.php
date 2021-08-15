@@ -58,8 +58,7 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 */
-
-$dbvalues = array('DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD');
+$dbvalues = array('DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL');
 /** -------------------------------------------------------------*/
 foreach ($dbvalues as $dbvalue) {
     define($dbvalue, getenv($dbvalue));
